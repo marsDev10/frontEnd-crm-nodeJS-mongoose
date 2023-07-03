@@ -39,7 +39,7 @@ const Clientes = () => {
                 Nuevo Cliente
     </Link>
     <ul className="listado-clientes">
-      { clientes.map(el => (
+      { clientes.length ? clientes.map(el => (
         <li className="cliente" key={el._id}>
           <Cliente
             id={el._id}
@@ -50,7 +50,8 @@ const Clientes = () => {
             telefono={el.telefono}
           />
         </li>
-      )).reverse()}
+      )).reverse() 
+      : <p> No tienes clientes D: </p>}
     </ul>
     </>
   )

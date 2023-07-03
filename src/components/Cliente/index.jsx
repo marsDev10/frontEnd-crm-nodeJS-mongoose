@@ -41,15 +41,11 @@ const Cliente = ({
 
             }
 
-
-
-
         } catch(err) {
 
             console.log(err);
         }
     };
-
 
   return (
     <>
