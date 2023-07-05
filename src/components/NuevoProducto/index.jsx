@@ -77,7 +77,7 @@ const NuevoProducto = () => {
         const { nombre, precio } = producto;
 
         // revisar que las propiedades del state tengan contenido
-        let valido = !nombre.length || !precio.length || !archivo.name;
+        let valido = !nombre.length || !precio.length || !archivo?.name;
 
         // return true o false
         return valido;
@@ -135,4 +135,4 @@ const NuevoProducto = () => {
   )
 }
 
-export { NuevoProducto } 
+export default NuevoProducto; 

@@ -140,4 +140,4 @@ const NuevoCliente = () => {
   )
 }
 
-export { NuevoCliente } 
+export default NuevoCliente;

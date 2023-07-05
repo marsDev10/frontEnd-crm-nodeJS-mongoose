@@ -162,4 +162,4 @@ const EditarCliente = () => {
   )
 }
 
-export { EditarCliente };
+export default EditarCliente;

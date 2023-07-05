@@ -9,6 +9,8 @@ const Cliente = ({
     empresa,
     correo,
     telefono,
+    action,
+    setAction,
 }) => {
 
     const elimimarCliente = async () => {
@@ -36,7 +38,8 @@ const Cliente = ({
                         'Eliminado',
                         res.data.message,
                         'success',
-                    );
+                        );
+                    setAction(!action);
                 }
 
             }

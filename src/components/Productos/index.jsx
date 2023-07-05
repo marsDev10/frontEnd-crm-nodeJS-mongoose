@@ -8,6 +8,7 @@ import { Producto } from '../Producto';
 const Productos = () => {
 
   const [productos, setProductos] = useState([]);
+  const [action, setAction] = useState(false);
 
   const consultarAPI = async () => {
     try {
@@ -25,7 +26,7 @@ const Productos = () => {
 
     consultarAPI();
 
-  }, [productos]);
+  }, [action]);
 
     return (
       <>
@@ -39,6 +40,8 @@ const Productos = () => {
                 <Producto 
                     key={producto._id}
                     producto={producto}
+                    action={action}
+                    setAction={setAction}
                 />
             )).reverse()}
         </ul>
@@ -46,4 +49,4 @@ const Productos = () => {
     )
   }
   
-  export { Productos };
+  export default Productos;

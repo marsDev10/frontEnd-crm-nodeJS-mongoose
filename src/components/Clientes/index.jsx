@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 const Clientes = () => {
 
   const [clientes, setClientes] = useState([]);
+  const [action, setAction] = useState(false);
 
   const consultarAPI = async () => {
     try {
@@ -27,7 +28,7 @@ const Clientes = () => {
 
     consultarAPI();
 
-  }, [clientes])
+  }, [action])
 
   return (
     <>
@@ -48,6 +49,8 @@ const Clientes = () => {
             empresa={el.empresa}
             correo={el.email}
             telefono={el.telefono}
+            action={action}
+            setAction={setAction}
           />
         </li>
       )).reverse() 
@@ -57,4 +60,4 @@ const Clientes = () => {
   )
 }
 
-export { Clientes };
+export default Clientes;

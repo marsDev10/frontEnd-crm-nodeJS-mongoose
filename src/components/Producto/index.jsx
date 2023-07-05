@@ -4,7 +4,7 @@ import { clienteAxios } from '../../config/API';
 
 import Swal from 'sweetalert2';
 
-const Producto = ({ producto }) => {
+const Producto = ({ producto, action, setAction }) => {
 
     const { _id, nombre, precio, imagen } = producto;
 
@@ -34,6 +34,7 @@ const Producto = ({ producto }) => {
                         res.data.message,
                         'success',
                     );
+                    setAction(!action);
                 }
 
             }
